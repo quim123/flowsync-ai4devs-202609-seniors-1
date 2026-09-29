@@ -81,6 +81,8 @@ Reglas, y son estrictas:
 - Prohibido preguntar por el modelo de datos, por entidades, por endpoints o por
   cualquier cosa técnica. Solo producto.
 - No propongas soluciones, ni features, ni alcance todavía. Solo las preguntas.
+```
+
 ---
 
 ## Prompt 3
@@ -427,3 +429,31 @@ Relee el documento entero que acabas de escribir y responde, sin reescribirlo:
    que él mismo prohíbe en otro, o promete algo que su propio alcance impide cumplir?
 
 Solo la lista. No toques el archivo.
+```
+
+**Qué salió:** ocho hallazgos. Lo pego tal cual lo copié del terminal, con los solapes de
+columnas y los trozos perdidos que trajo el copy/paste, y en el inglés en que salió. No lo
+he recompuesto: la versión mía, ya digerida, está en la sección «Hallazgos» del alcance.
+
+1. Assumptions with no evidence in the fact sheet or the code
+
+- "Unassigned = free" (Alcas about "what is free" butnever defines it. It's also unclear whether a pending task that already has an assignee counts as free.                                                      hree fixed states: pendi. The sheet asks to filter by state but never lists the states.
+- Anyone with an account joins the single space (l.117–118). The sheet says "a space" but says nothing aegistration, anyone who hasthe URL is inside.
+- Losing edit and delete doesn't hurt (NO-alcance 13). Nothing in the sheet backs that "mark it as done" is enough.
+- A task with only a title can replace a heavy task manager (l.98–99 combined with NO-alcance 12 and 17). The sheet says it replaces the tool, but never says a tan live with no descript
+- Real-time is "by far the most expensive part" (NO-alcance 1, l.126; Parte B, l.189). No evidence in the code or the sheet. It's also a cost argument, not aalidation argument, whicning the exercise forbids.
+- Web and desktop only (NO-alcance 18, "en web"). Nobody stated it; I carried it over from my own assumption.                                                       ue dates with no time zo ha pasado de plazo"). Thes 3 time zones, and nothing defines when a task becomes overdue.
+- Success is checked by talking to "the pilot team" (NO-alcance 8, l.140). That team doesn't exist; see incoherence 1 in section 3.
+
+2. Scope not justified by the problem
+
+- "When each task last moved" (Alcance 3). It comes from my assumption, not fromheet. The problem ("who  doesn't need it; it onlyserves the "what has moved" case in the sheet.                                verdue tasks and the due are in the sheet as a fact,but the problem statement (interruptions, duplicated work) never mentions deadlines. Nothing in the problem justifies them.
+- Filtering by state (Alcance 4). It's in the sheet. For a list of 3–10 people's tasks the problem doesn't obviously need it, and it's the most dispensable item in the scope.                                                                    eassigning the assignee ified, because the problem is precisely "who is on what". It stays off this list.
+                                                                                Internal incoherences
+                                                                                Validating with a team t1) says the case study "no es un cliente". Yet NO-alcance 8 and H2 depend on "hablando con el equipo piloto" and on "una semana de uso real". No real user is declared who could carry that out.
+2. Moving real-time to NO-alcance contradicts the fact sheet. The sheet defines "tiempo real" as a produestado sin refrescar"). Thedocument now removes it, without marking that it goes against a fact that was not up for debate.
+3. The founding episode isne. Suppose A opens the listin the morning and B starts a task at 10:00. If A keeps the tab open and starts the same task at 11:00, ode (l.83–84) again. Thevalue promise "siempre al día sin preguntar" (l.97) doesn't hold with a list you refresh by hand.
+4. Showing overdue tasks vs. not being able to edit them. Alcance 3 promises showing what is overdue. But Alcance 2 lets you change only the state and the assignee, and NO-alcance 13 rules tdated due date can never befixed, and the overdue warning stays on for good.                               "Mark it as done" pollutant to show. NO-alcance 13says a mistaken task gets marked "hecha". The list then shows as finished work that was never done, which damages the status H2 relies on.                     Section 2 contradicts seassumption "cualquiera puedeeditar y borrar cualquier tarea" (l.70), and NO-alcance 13 rules that out. The  document doesn't say thay the cut.
+7. Section 2 also contradicts itself. Line 38 says "sin inventar nada", and lines 55–73 then list 10 things the AI invented.
+8. "Dos clics" is a promise the scope can't keep. H1 depends on it, Alcance 2 promises it for both state and assignee, and NO-alcance 1 argues from cost. That makes "dos clics" a hard requirement stated as a product fact, even though it's the untested hypothesis in the scope the very thingH1 is supposed to test.
+
