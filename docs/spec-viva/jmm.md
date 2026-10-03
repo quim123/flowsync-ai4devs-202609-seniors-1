@@ -27,7 +27,7 @@ La API SHALL crear una cuenta mediante `POST /api/v1/auth/signup` con los campos
 
 ### Requirement: Validación del registro
 
-La API MUST rechazar el registro con código 422 y un cuerpo `{ "errors": [...] }`, donde cada error indica `field` y `rule`, cuando algún campo no cumple sus reglas: `fullName` debe estar presente (puede ser `null`); `email` debe tener formato de email, un máximo de 254 caracteres y no estar ya registrado; `password` debe tener entre 8 y 32 caracteres; `passwordConfirmation` debe tener entre 8 y 32 caracteres y coincidir con `password`.
+La API SHALL rechazar el registro con código 422 y un cuerpo `{ "errors": [...] }`, donde cada error indica `field` y `rule`, cuando algún campo no cumple sus reglas: `fullName` debe estar presente (puede ser `null`); `email` debe tener formato de email, un máximo de 254 caracteres y no estar ya registrado; `password` debe tener entre 8 y 32 caracteres; `passwordConfirmation` debe tener entre 8 y 32 caracteres y coincidir con `password`.
 
 #### Scenario: Email ya registrado
 
@@ -75,7 +75,7 @@ La API SHALL iniciar sesión mediante `POST /api/v1/auth/login` con los campos `
 
 ### Requirement: Rechazo de credenciales en la API
 
-La API MUST rechazar el inicio de sesión con código 400 cuando el email no corresponde a ninguna cuenta o la contraseña no es la de esa cuenta, sin indicar cuál de los dos falla, y MUST rechazarlo con código 422 cuando `email` no tiene formato de email, supera 254 caracteres o falta `password`.
+La API SHALL rechazar el inicio de sesión con código 400 cuando el email no corresponde a ninguna cuenta o la contraseña no es la de esa cuenta, sin indicar cuál de los dos falla, y SHALL rechazarlo con código 422 cuando `email` no tiene formato de email, supera 254 caracteres o falta `password`.
 
 #### Scenario: Contraseña incorrecta
 
@@ -136,7 +136,7 @@ La API SHALL cerrar sesión mediante `POST /api/v1/account/logout` con la cabece
 
 ### Requirement: Protección de las rutas de cuenta en la API
 
-La API MUST responder con código 401 a `GET /api/v1/account/profile` y a `POST /api/v1/account/logout` cuando la petición no lleva token, o lleva uno inexistente o revocado. Las respuestas de la API SHALL ser siempre JSON.
+La API SHALL responder con código 401 a `GET /api/v1/account/profile` y a `POST /api/v1/account/logout` cuando la petición no lleva token, o lleva uno inexistente o revocado. Las respuestas de la API SHALL ser siempre JSON.
 
 #### Scenario: Sin token
 
@@ -298,10 +298,6 @@ Al pulsar "Cerrar sesión", la aplicación web SHALL cerrar la sesión en el nav
 
 Escritos por el agente: 17
 Comprobados por mí abriendo el código: 4
-
-Abrí los archivos de validación del registro, el modelo de usuario, el middleware de autenticación y
-el proveedor de sesión del frontend. Del resto tengo la lectura que hizo el agente, pero no la mía, y
-por eso no los cuento.
 
 ## 2. Incoherencias que aparecieron al escribir la spec
 
