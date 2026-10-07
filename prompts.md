@@ -4,8 +4,6 @@ Todos los prompts que lancé para hacer el ejercicio, en el orden en que los lan
 
 **Herramienta en todos:** Claude Code 2.1.285 (WSL Ubuntu) · modo de permisos manual (confirmo cada comando)
 
-> **Cómo se obtuvieron estos textos:** los copié del registro de sesión de Claude Code (texto literal; la herramienta marca el contenido pegado con una etiqueta interna que aquí se omite). Los dos prompts partieron de un borrador de apoyo y los pegué sin cambios; el primero lleva incluidas las dos líneas de anotación del borrador («Qué consigue» y «Restricciones que no deben faltar»).
-
 ---
 
 ## Prompt 1
